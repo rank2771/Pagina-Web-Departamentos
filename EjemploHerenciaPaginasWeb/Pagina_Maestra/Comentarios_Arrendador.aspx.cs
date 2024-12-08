@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EjemploHerenciaPaginasWeb.Helpers;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
@@ -18,19 +19,16 @@ namespace EjemploHerenciaPaginasWeb.Pagina_Maestra
 
         public void CargarComentarios()
         {
-            string connectionString = "Data Source=JOSE-SAUZA;Initial Catalog=MiBaseDeDatos;Trusted_Connection=True;";
-            string query = "SELECT ID, Usuario, Fecha, VerificacionID FROM Comentarios";
-
+            // Modificar la consulta para omitir los comentarios con VerificacionID diferente de NULL
+            string query = "SELECT ID, Usuario, Fecha, VerificacionID FROM Comentarios WHERE VerificacionID IS NULL";
             DataTable comentariosTable = new DataTable();
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = Conexion.GetOpenConnection())
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        connection.Open();
-
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
                             adapter.Fill(comentariosTable);
@@ -46,7 +44,7 @@ namespace EjemploHerenciaPaginasWeb.Pagina_Maestra
                 }
                 else
                 {
-                    lblMensaje.Text = "No se encontraron comentarios.";
+                    lblMensaje.Text = "No se encontraron comentarios pendientes de verificación.";
                     lblMensaje.Visible = true;
                 }
             }
@@ -79,19 +77,17 @@ namespace EjemploHerenciaPaginasWeb.Pagina_Maestra
 
         private bool ActualizarVerificacion(int comentarioId, int verificacion)
         {
-            string connectionString = "Data Source=JOSE-SAUZA;Initial Catalog=MiBaseDeDatos;Trusted_Connection=True;";
             string query = "UPDATE Comentarios SET VerificacionID = @VerificacionID WHERE ID = @ComentarioID";
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = Conexion.GetOpenConnection())
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@VerificacionID", verificacion);
                         command.Parameters.AddWithValue("@ComentarioID", comentarioId);
 
-                        connection.Open();
                         command.ExecuteNonQuery();
                     }
                 }
