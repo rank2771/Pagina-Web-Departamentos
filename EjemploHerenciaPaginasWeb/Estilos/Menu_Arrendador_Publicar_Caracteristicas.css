@@ -1,0 +1,89 @@
+﻿body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5; /* Fondo suave */
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 150%; /* Cambié a 100% para evitar que sobresalga */
+    max-width: 500px;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+    .input-field:focus {
+        border-color: #409eff;
+        outline: none;
+        box-shadow: 0 0 4px rgba(64, 158, 255, 0.2);
+    }
+
+/* Contenedor del botón Funcionando Alfredo.....*/
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    margin-right: 30px; /* Separación del botón con el borde derecho */
+    margin-top: 20px; /* Separación del botón del contenido superior */
+}
+
+.custom-button {
+    display: block;
+    margin: 10px auto 10px auto; /* Ajusta el margen superior e inferior */
+    padding: 10px;
+    font-size: 16px; /* Asegura que el tamaño del texto del botón también sea de 16px */
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center !Important;
+}
+
+    .custom-button:hover {
+        background-color: dimgrey;
+        color: white;
+    }

@@ -1,0 +1,57 @@
+﻿/* Estilo del cuerpo y fuente */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+    .login-container h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+    .text-center a:hover {
+        text-decoration: underline;
+    }
+/* Contenedor de los botones */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo de los botones */
+.custom-button {
+    display: block;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px; /* Asegura que el tamaño del texto del botón también sea de 16px */
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    /* Estilo del botón al pasar el mouse */
+    .custom-button:hover {
+        background-color: dimgrey; /* Color de fondo al hacer hover */
+        color: white; /* Color de fondo al hacer hover */
+    }

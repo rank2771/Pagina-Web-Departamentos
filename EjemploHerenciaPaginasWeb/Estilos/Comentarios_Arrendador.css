@@ -1,0 +1,95 @@
+﻿/* Contenedor principal */
+.contenedor-principal {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; /* Centra el contenedor */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    font-family: Arial, sans-serif; /* Fuente estándar */
+    color: #333; /* Texto oscuro */
+}
+
+/* Título principal */
+.titulo-seccion {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007BFF; /* Azul */
+}
+
+/* Sección general */
+.seccion {
+    margin-bottom: 30px; /* Espaciado entre secciones */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+    /* Encabezado de cada sección */
+    .seccion h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    /* Párrafos en las secciones */
+    .seccion p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+        color: #555; /* Gris oscuro */
+    }
+
+/* Campos de entrada */
+.input-campo {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+/* Botón personalizado */
+.btn-personalizado {
+    display: inline-block;
+    background-color: #007BFF; /* Fondo azul */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones */
+}
+
+    .btn-personalizado:hover {
+        background-color: #0056b3; /* Azul más oscuro */
+        transform: scale(1.05); /* Efecto de agrandamiento */
+    }
+
+/* Repeater resultados */
+.RepeaterResultados p {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e9ecef; /* Fondo gris claro */
+    border-left: 4px solid #007BFF; /* Borde azul a la izquierda */
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Ajustes generales */
+body {
+    background-color: #f0f4f8; /* Fondo general */
+    font-family: Arial, sans-serif; /* Fuente estándar */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

@@ -1,0 +1,266 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A853586F-A6D8-4F85-ADE3-76477F250E4E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EjemploHerenciaPaginasWeb</RootNamespace>
+    <AssemblyName>EjemploHerenciaPaginasWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44369</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Estilos\Comentarios_Arrendador.css" />
+    <Content Include="Estilos\Default.css" />
+    <Content Include="Estilos\Inicio_Sesion.css" />
+    <Content Include="Estilos\Menu_Arrendador.css" />
+    <Content Include="Estilos\Menu_Arrendador_Publicar_Foto.css" />
+    <Content Include="Estilos\Menu_Arrendador_Publicar_Caracteristicas.css" />
+    <Content Include="Estilos\Menu_Arrendador_Publicar_Inmueble_Direccion.css" />
+    <Content Include="Estilos\Menu_User_Clic.css" />
+    <Content Include="Estilos\Pagina_Recuperar_contrasena.css" />
+    <Content Include="Estilos\Pagina_de_Inicio_de_sesion.css" />
+    <Content Include="Estilos\Recuperar_Contrasena.css" />
+    <Content Include="Estilos\Registro_Alumno.css" />
+    <Content Include="Estilos\Registro_Arrendador.css" />
+    <Content Include="Estilos\Verificacion_Correo.css" />
+    <Content Include="Pagina_Maestra\Agregar.aspx" />
+    <Content Include="Pagina_Maestra\Comentarios_Arrendador.aspx" />
+    <Content Include="Pagina_Maestra\Menu_Arrendador_Principal.aspx" />
+    <Content Include="Pagina_Maestra\Menu_Arrendador_Publicar_Caracteristicas.aspx" />
+    <Content Include="Pagina_Maestra\Menu_Arrendador_Publicar_Inmueble_Foto.aspx" />
+    <Content Include="Pagina_Maestra\Menu_Arrendador_Publicar_Inmueble_Direccion.aspx" />
+    <Content Include="Pagina_Maestra\Pagina_Menu_usuario_Clic.aspx" />
+    <Content Include="Pagina_Maestra\Pagina_Recuperar_contrasena.aspx" />
+    <Content Include="Pagina_Maestra\Pagina_Registro_Alumno.aspx" />
+    <Content Include="Pagina_Maestra\Pagina_Registro_Arrendador.aspx" />
+    <Content Include="Pagina_Maestra\Pagina_Verificacion_de_correo.aspx" />
+    <Content Include="Pagina_Maestra\Default.aspx" />
+    <Content Include="Estilos\Master.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Pagina_Maestra\Inicio_Sesion.aspx" />
+    <Content Include="Pagina_Maestra\Pagina_Menu_usuario.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Pagina_Maestra\Agregar.aspx.cs">
+      <DependentUpon>Agregar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Agregar.aspx.designer.cs">
+      <DependentUpon>Agregar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Comentarios_Arrendador.aspx.cs">
+      <DependentUpon>Comentarios_Arrendador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Comentarios_Arrendador.aspx.designer.cs">
+      <DependentUpon>Comentarios_Arrendador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Menu_Arrendador_Principal.aspx.cs">
+      <DependentUpon>Menu_Arrendador_Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Menu_Arrendador_Principal.aspx.designer.cs">
+      <DependentUpon>Menu_Arrendador_Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Menu_Arrendador_Publicar_Caracteristicas.aspx.cs">
+      <DependentUpon>Menu_Arrendador_Publicar_Caracteristicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Menu_Arrendador_Publicar_Caracteristicas.aspx.designer.cs">
+      <DependentUpon>Menu_Arrendador_Publicar_Caracteristicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Menu_Arrendador_Publicar_Inmueble_Foto.aspx.cs">
+      <DependentUpon>Menu_Arrendador_Publicar_Inmueble_Foto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Menu_Arrendador_Publicar_Inmueble_Foto.aspx.designer.cs">
+      <DependentUpon>Menu_Arrendador_Publicar_Inmueble_Foto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Menu_Arrendador_Publicar_Inmueble_Direccion.aspx.cs">
+      <DependentUpon>Menu_Arrendador_Publicar_Inmueble_Direccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Menu_Arrendador_Publicar_Inmueble_Direccion.aspx.designer.cs">
+      <DependentUpon>Menu_Arrendador_Publicar_Inmueble_Direccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Menu_usuario_Clic.aspx.cs">
+      <DependentUpon>Pagina_Menu_usuario_Clic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Menu_usuario_Clic.aspx.designer.cs">
+      <DependentUpon>Pagina_Menu_usuario_Clic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Recuperar_contrasena.aspx.cs">
+      <DependentUpon>Pagina_Recuperar_contrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Recuperar_contrasena.aspx.designer.cs">
+      <DependentUpon>Pagina_Recuperar_contrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Registro_Alumno.aspx.cs">
+      <DependentUpon>Pagina_Registro_Alumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Registro_Alumno.aspx.designer.cs">
+      <DependentUpon>Pagina_Registro_Alumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Registro_Arrendador.aspx.cs">
+      <DependentUpon>Pagina_Registro_Arrendador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Registro_Arrendador.aspx.designer.cs">
+      <DependentUpon>Pagina_Registro_Arrendador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Verificacion_de_correo.aspx.cs">
+      <DependentUpon>Pagina_Verificacion_de_correo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Verificacion_de_correo.aspx.designer.cs">
+      <DependentUpon>Pagina_Verificacion_de_correo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Inicio_Sesion.aspx.cs">
+      <DependentUpon>Inicio_Sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Inicio_Sesion.aspx.designer.cs">
+      <DependentUpon>Inicio_Sesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Menu_usuario.aspx.cs">
+      <DependentUpon>Pagina_Menu_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\Pagina_Menu_usuario.aspx.designer.cs">
+      <DependentUpon>Pagina_Menu_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pagina_Maestra\PaginaMaestra.Master.cs">
+      <DependentUpon>PaginaMaestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_Maestra\PaginaMaestra.Master.designer.cs">
+      <DependentUpon>PaginaMaestra.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Pagina_Maestra\PaginaMaestra.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51584</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44369/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

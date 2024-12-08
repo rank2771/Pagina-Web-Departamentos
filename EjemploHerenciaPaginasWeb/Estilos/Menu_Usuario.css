@@ -1,0 +1,119 @@
+﻿body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5; /* Fondo suave */
+}
+
+/* Configuración general para el contenido */
+body {
+    font-family: Arial, sans-serif; /* Fuente estándar */
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #a1c241; /* Fondo general */
+    display: flex; /* Permite centrar contenido con flexbox */
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
+
+/* Estilo general para el main */
+main {
+    display: flex; /* Flexbox para organizar el contenido */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: flex-start; /* Comienza desde la parte superior */
+    align-items: center; /* Centra horizontalmente el contenido */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 20px; /* Espaciado interno */
+    margin: 0; /* Sin margen externo */
+    background-color: #ffffff; /* Fondo blanco */
+    box-sizing: border-box; /* Incluye el padding en el ancho */
+}
+
+/* Contenedor principal del contenido del usuario */
+#ContentPlaceHolder1 {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    background-color: #f0f4fa; /* Fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Contenedor principal para los departamentos */
+.departamento-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f4fa; /* Fondo suave */
+    border: 2px solid #000; /* Borde negro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    margin-bottom: 20px; /* Separación entre contenedores */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sección de la imagen del departamento */
+.departamento-imagen img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #000; /* Borde negro */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Información del departamento */
+.departamento-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px; /* Separación respecto a la imagen */
+    text-align: left;
+    width: calc(100% - 180px); /* Ajusta el espacio restante para la información */
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+    .departamento-info h3 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .departamento-info p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+/* Botón "Ver Detalles" */
+.btn-ver-detalles {
+    display: inline-block;
+    background-color: #007BFF; /* Color azul */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 12px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Animación en hover */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+    .btn-ver-detalles:hover {
+        background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+    }
+

@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.Master.cs" Inherits="EjemploHerenciaPaginasWeb.Site1" %>
+
+<%--<!DOCTYPE html>
+<html lang="es">
+
+<head runat="server">
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Inicio</title>
+      
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+    <link href="../Estilos/Master.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <!-- Barra de navegación -->
+            <div id="navbar">
+                <ul>
+                    <li><a href="Default.aspx">Inicio</a></li>
+                </ul>
+            </div>
+            <!-- Contenido principal -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <!-- Pie de página -->
+            <div id="footer">
+                <span>wasdsoftwaredev@gmail.com</span>
+                <span>Whatsapp: +52 5524284036</span>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>--%>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head runat="server">
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Inicio</title>
+
+    <!-- Espacio para contenido específico de cada página -->
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Enlace a estilos principales -->
+    <link href="../Estilos/Master.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <!-- Barra de navegación -->
+            <header id="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="Default.aspx">Inicio</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Contenido principal -->
+            <main>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="Buttons" runat="server"></asp:ContentPlaceHolder>
+            </main>
+            
+            <!-- Pie de página -->
+            <footer id="footer">
+                <div class="footer-content">
+                    <span>wasdsoftwaredev@gmail.com</span>
+                    <span>Whatsapp: +52 5524284036</span>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+﻿/* Estilo del cuerpo y fuente */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.recuperar-container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.custom-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .custom-button:hover {
+        background-color: dimgrey;
+        color: white;
+    }
