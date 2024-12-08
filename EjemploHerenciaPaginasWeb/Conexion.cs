@@ -5,7 +5,7 @@ namespace EjemploHerenciaPaginasWeb.Helpers
 {
     public class Conexion
     {
-        private static readonly string connectionString = "Server=DESKTOP-GDTRFDM\\SQLEXPRESS;Database=MiBaseDeDatos;Trusted_Connection=True;";
+        private static readonly string connectionString = "Server=Jose-Sauza;Database=MiBaseDeDatos;Trusted_Connection=True;";
 
         // Método para obtener una conexión SQL abierta
         public static SqlConnection GetOpenConnection()
