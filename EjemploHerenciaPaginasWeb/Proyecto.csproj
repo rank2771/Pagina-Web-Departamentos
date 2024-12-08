@@ -75,8 +75,11 @@
     <Content Include="Estilos\Menu_Arrendador_Publicar_Caracteristicas.css" />
     <Content Include="Estilos\Menu_Arrendador_Publicar_Inmueble_Direccion.css" />
     <Content Include="Estilos\Menu_User_Clic.css" />
+    <Content Include="Estilos\Pagina_Comentarios_Arrendador.css" />
+    <Content Include="Estilos\Pagina_Menu_Usuario.css" />
     <Content Include="Estilos\Pagina_Recuperar_contrasena.css" />
     <Content Include="Estilos\Pagina_de_Inicio_de_sesion.css" />
+    <Content Include="Estilos\Pagina_Web_Maestra.css" />
     <Content Include="Estilos\Recuperar_Contrasena.css" />
     <Content Include="Estilos\Registro_Alumno.css" />
     <Content Include="Estilos\Registro_Arrendador.css" />

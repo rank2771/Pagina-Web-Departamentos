@@ -1,0 +1,106 @@
+﻿/* Estilo general para la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.contenedor-principal {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Encabezado de la sección */
+.titulo-seccion {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Mensajes de error o información */
+.mensaje-error {
+    display: block;
+    color: #ff4d4d;
+    background-color: #ffe6e6;
+    border: 1px solid #ff4d4d;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Contenedor de la tabla */
+.contenedor-comentarios {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+/* Tabla de comentarios */
+.tabla-comentarios {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+    .tabla-comentarios th,
+    .tabla-comentarios td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .tabla-comentarios th {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .tabla-comentarios tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .tabla-comentarios tr:hover {
+        background-color: #ddd;
+    }
+
+/* Botones de acción */
+.btn-aprobar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    .btn-aprobar:hover {
+        background-color: #218838;
+    }
+
+.btn-rechazar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    .btn-rechazar:hover {
+        background-color: #c82333;
+    }
+

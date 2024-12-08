@@ -22,8 +22,7 @@
             Text="Agregar Departamento"
             OnClick="BtnAgregarDepartamento_Click"
             CssClass="custom-button" />
-        <br />
-        <br />
+        
         <asp:Button
             ID="Comentarios"
             runat="server"
