@@ -19,8 +19,13 @@ namespace EjemploHerenciaPaginasWeb.Pagina_Maestra
 
         public void CargarComentarios()
         {
-            // Modificar la consulta para omitir los comentarios con VerificacionID diferente de NULL
-            string query = "SELECT ID, Usuario, Fecha, VerificacionID FROM Comentarios WHERE VerificacionID IS NULL";
+            // Consulta para mostrar solo los comentarios cuya publicación existe y VerificacionID es NULL
+            string query = @"
+                SELECT C.ID, C.Usuario, C.Fecha, C.VerificacionID 
+                FROM Comentarios C
+                INNER JOIN Departamento D ON C.DepartamentoID = D.ID
+                WHERE D.ID IS NOT NULL AND C.VerificacionID IS NULL";
+
             DataTable comentariosTable = new DataTable();
 
             try
@@ -44,7 +49,7 @@ namespace EjemploHerenciaPaginasWeb.Pagina_Maestra
                 }
                 else
                 {
-                    lblMensaje.Text = "No se encontraron comentarios pendientes de verificación.";
+                    lblMensaje.Text = "No se encontraron comentarios pendientes de verificación para publicaciones existentes.";
                     lblMensaje.Visible = true;
                 }
             }
