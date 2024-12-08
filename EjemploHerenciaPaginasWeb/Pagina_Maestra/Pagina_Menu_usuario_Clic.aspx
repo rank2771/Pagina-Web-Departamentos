@@ -48,34 +48,54 @@
             <!-- Información del Departamento -->
             <div class="info-departamento">
                 <h3 class="titulo-subseccion">Información del Departamento</h3>
-                <p><strong>Precio:</strong>
-                    <asp:Label ID="lblPrecio" runat="server"></asp:Label></p>
-                <p><strong>Ubicación:</strong>
-                    <asp:Label ID="lblUbicacion" runat="server"></asp:Label></p>
-                <p><strong>Número de Habitaciones:</strong>
-                    <asp:Label ID="lblHabitaciones" runat="server"></asp:Label></p>
+                <p>
+                    <strong>Precio:</strong>
+                    <asp:Label ID="lblPrecio" runat="server"></asp:Label>
+                </p>
+                <p>
+                    <strong>Ubicación:</strong>
+                    <asp:Label ID="lblUbicacion" runat="server"></asp:Label>
+                </p>
+                <p>
+                    <strong>Número de Habitaciones:</strong>
+                    <asp:Label ID="lblHabitaciones" runat="server"></asp:Label>
+                </p>
             </div>
 
             <!-- Normas -->
-            <div class="normas-departamento">
-                <h3 class="titulo-subseccion">Normas</h3>
-                <p><strong>Estacionamiento:</strong>
-                    <asp:Label ID="lblEstacionamiento" runat="server"></asp:Label></p>
-                <p><strong>Mascotas:</strong>
-                    <asp:Label ID="lblMascotas" runat="server"></asp:Label></p>
-                <p><strong>Amueblado:</strong>
-                    <asp:Label ID="lblAmueblado" runat="server"></asp:Label></p>
+            <div class="info-contacto">
+                <div class="normas-departamento">
+                    <h3 class="titulo-subseccion">Normas</h3>
+                    <p>
+                        <strong>Estacionamiento:</strong>
+                        <asp:Label ID="lblEstacionamiento" runat="server"></asp:Label>
+                    </p>
+                    <p>
+                        <strong>Mascotas:</strong>
+                        <asp:Label ID="lblMascotas" runat="server"></asp:Label>
+                    </p>
+                    <p>
+                        <strong>Amueblado:</strong>
+                        <asp:Label ID="lblAmueblado" runat="server"></asp:Label>
+                    </p>
+                </div>
             </div>
 
             <!-- Información de Contacto -->
             <div class="info-contacto">
                 <h3 class="titulo-subseccion">Contacto</h3>
-                <p><strong>Nombre:</strong>
-                    <asp:Label ID="lblNombreContacto" runat="server"></asp:Label></p>
-                <p><strong>Teléfono:</strong>
-                    <asp:Label ID="lblTelefono" runat="server"></asp:Label></p>
-                <p><strong>Correo Electrónico:</strong>
-                    <asp:Label ID="lblCorreoContacto" runat="server"></asp:Label></p>
+                <p>
+                    <strong>Nombre:</strong>
+                    <asp:Label ID="lblNombreContacto" runat="server"></asp:Label>
+                </p>
+                <p>
+                    <strong>Teléfono:</strong>
+                    <asp:Label ID="lblTelefono" runat="server"></asp:Label>
+                </p>
+                <p>
+                    <strong>Correo Electrónico:</strong>
+                    <asp:Label ID="lblCorreoContacto" runat="server"></asp:Label>
+                </p>
             </div>
 
         </div>

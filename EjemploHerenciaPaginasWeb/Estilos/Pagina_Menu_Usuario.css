@@ -1,0 +1,122 @@
+﻿body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5; /* Fondo suave */
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/*main {
+    min-height: calc(100vh - 160px);*/  /*Altura total menos navbar y footer */
+    /*padding-top: 60px;*/  /*Espacio para el navbar */
+    /*padding-bottom: 100px;*/ /* Espacio para el footer */
+    /*width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}*/
+
+/* Contenedor principal del contenido del usuario */
+#ContentPlaceHolder1 {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    background-color: #f0f4fa; /* Fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Contenedor principal para los departamentos */
+.departamento-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f4fa; /* Fondo suave */
+    border: 2px solid #000; /* Borde negro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    margin-bottom: 20px; /* Separación entre contenedores */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.departamento-imagen {
+    display: block; /* Asegura que el botón se comporte como un bloque */
+    width: 100%; /* Ocupa todo el ancho de su contenedor */
+    max-width: 150px; /* Limita el ancho máximo del botón */
+    height: 150px; /* Mantiene la proporción de la imagen */
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 10px; /* Bordes redondeados para darle un aspecto suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para efectos visuales */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+    .departamento-imagen:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Intensifica la sombra */
+    }
+
+/* Información del departamento */
+.departamento-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px; /* Separación respecto a la imagen */
+    text-align: left;
+    width: calc(100% - 180px); /* Ajusta el espacio restante para la información */
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+    .departamento-info h3 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .departamento-info p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+/* Botón "Ver Detalles" */
+.btn-ver-detalles {
+    display: inline-block;
+    background-color: #007BFF; /* Color azul */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 12px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Animación en hover */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+    .btn-ver-detalles:hover {
+        background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+    }

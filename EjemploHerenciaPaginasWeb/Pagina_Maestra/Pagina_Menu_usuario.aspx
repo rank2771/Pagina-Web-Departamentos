@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="Menú Usuario" Language="C#" MasterPageFile="~/Pagina_Maestra/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="Pagina_Menu_usuario.aspx.cs" Inherits="EjemploHerenciaPaginasWeb.Pagina_Maestra.WebForm1" %>
 
 <asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
+       <!-- Enlace al archivo CSS -->
+    <link href="../Estilos/Pagina_Menu_Usuario.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="ContentMain" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- Enlace al archivo CSS -->
-    <link href="../Estilos/Menu_Usuario.css" rel="stylesheet" />
     <!-- Repeater para mostrar los departamentos -->
     <asp:Repeater ID="RepeaterDepartamentos" runat="server" OnItemCommand="RepeaterDepartamentos_ItemCommand">
         <ItemTemplate>
@@ -30,6 +30,7 @@
                         <strong>Breve Descripción:</strong> <%# Eval("InformacionBreve") %>
                     </p>
                 </div>
+            </div>
             </div>
         </ItemTemplate>
     </asp:Repeater>
