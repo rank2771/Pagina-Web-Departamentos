@@ -58,7 +58,7 @@ namespace EjemploHerenciaPaginasWeb.Pagina_Maestra
                             if (filasAfectadas > 0)
                             {
                                 Response.Write("<script>alert('Características, descripción y precio guardados correctamente.');</script>");
-                                Response.Redirect("Menu_Arrendador_Principal.aspx"); // Redirigir a la página principal
+                                Response.Redirect("~/Pagina_Maestra/Menu_Arrendador_Publicar_Inmueble_Foto.aspx"); // Redirigir a la página principal
                             }
                             else
                             {

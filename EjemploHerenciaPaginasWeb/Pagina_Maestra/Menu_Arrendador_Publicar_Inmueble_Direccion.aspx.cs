@@ -105,7 +105,7 @@ namespace EjemploHerenciaPaginasWeb.Pagina_Maestra
                                 Response.Write("<script>alert('Dirección guardada correctamente.');</script>");
 
                                 // Redirigir a la siguiente página
-                                Response.Redirect("~/Pagina_Maestra/Menu_Arrendador_Publicar_Inmueble_Foto.aspx");
+                                Response.Redirect("~/Pagina_Maestra/Menu_Arrendador_Publicar_Caracteristicas.aspx");
                             }
                             else
                             {
