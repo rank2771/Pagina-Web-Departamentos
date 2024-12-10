@@ -53,7 +53,8 @@
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
     <!-- Enlace a estilos principales -->
-    <link href="../Estilos/Master.css" rel="stylesheet" />
+    <%--<link href="../Estilos/Master.css" rel="stylesheet" />--%>
+    <link href="../Estilos/Pagina_Web_Maestra.css" rel="stylesheet" />
 </head>
 
 <body>

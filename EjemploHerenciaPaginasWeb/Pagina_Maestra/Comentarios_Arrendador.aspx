@@ -3,7 +3,7 @@
 
 <asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
     <!-- Vincular la hoja de estilos -->
-    <link href="Estilos/styles.css" rel="stylesheet" type="text/css" />
+    <link href="../Estilos/Pagina_Comentarios_Arrendador.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="ContentMain" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
