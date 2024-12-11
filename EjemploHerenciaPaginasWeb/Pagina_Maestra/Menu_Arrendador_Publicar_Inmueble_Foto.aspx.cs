@@ -107,7 +107,7 @@ namespace EjemploHerenciaPaginasWeb.Pagina_Maestra
                     lblMensaje.Text = $"Se han subido correctamente {contador} imagen(es) al departamento con ID {departamentoID}.";
                     lblMensaje.Visible = true;
 
-                    Response.Redirect("~/Pagina_Maestra/Menu_Arrendador_Publicar_Caracteristicas.aspx");
+                    Response.Redirect("~/Pagina_Maestra/Menu_Arrendador_Principal.aspx");
                 }
                 catch (Exception ex)
                 {
