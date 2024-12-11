@@ -10,7 +10,7 @@
     <link href="../Estilos/Comentarios_Arrendador.css" rel="stylesheet" />
     <div class="contenedor-principal">
         <!-- Encabezado -->
-        <h1 class="titulo-seccion">Aprobación de Comentarios</h1>
+        <h1 class="titulo-seccion">Comentarios</h1>
 
         <!-- Mensajes de error o información -->
         <asp:Label ID="lblMensaje" runat="server" CssClass="mensaje-error" Visible="false"></asp:Label>
@@ -19,16 +19,16 @@
         <div class="contenedor-comentarios">
             <asp:GridView ID="gridComentarios" runat="server" AutoGenerateColumns="false" CssClass="tabla-comentarios" OnRowCommand="gridComentarios_RowCommand">
                 <Columns>
-                    <asp:BoundField DataField="ID" HeaderText="ID" />
-                    <asp:BoundField DataField="Usuario" HeaderText="Usuario" />
-                    <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd HH:mm}" />
-                    <asp:BoundField DataField="VerificacionID" HeaderText="Verificación" />
+                    <%--<asp:BoundField DataField="ID" HeaderText="ID" />--%>
+                    <asp:BoundField DataField="Usuario" HeaderText="Este usuario quiere comentar." />
+                    <%--<asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd HH:mm}" />--%>
+                    <%--<asp:BoundField DataField="VerificacionID" HeaderText="Verificación" />--%>
                     <asp:TemplateField HeaderText="Acciones">
                         <ItemTemplate>
                             <!-- Botón para aprobar -->
-                            <asp:Button ID="btnAprobar" runat="server" Text="Aprobar" CommandName="Aprobar" CommandArgument='<%# Eval("ID") %>' CssClass="btn-aprobar" />
+                            <asp:Button ID="btnAprobar" runat="server" Text="Si" CommandName="Aprobar" CommandArgument='<%# Eval("ID") %>' CssClass="btn-aprobar" />
                             <!-- Botón para rechazar -->
-                            <asp:Button ID="btnRechazar" runat="server" Text="Rechazar" CommandName="Rechazar" CommandArgument='<%# Eval("ID") %>' CssClass="btn-rechazar" />
+                            <asp:Button ID="btnRechazar" runat="server" Text="No" CommandName="Rechazar" CommandArgument='<%# Eval("ID") %>' CssClass="btn-rechazar" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
