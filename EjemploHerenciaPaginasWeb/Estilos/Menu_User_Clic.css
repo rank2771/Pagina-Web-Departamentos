@@ -115,21 +115,23 @@
     box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
 }
 
-/* Botón para enviar comentarios */
 .btn-enviar-comentario {
-    background-color: #28a745; /* Verde */
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Bordes laterales invisibles */
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid #ccc; /* Triángulo con fondo semitransparente */
+    position: relative; /* Para posicionar el texto sobre el triángulo */
+    cursor: pointer; /* Cursor de puntero para indicar interactividad */
+    display: inline-block;
+    transition: transform 0.3s ease, border-bottom-color 0.3s ease; /* Transición suave */
+    background-color: #f9f9f9;
 }
 
     .btn-enviar-comentario:hover {
-        background-color: #218838; /* Verde más oscuro */
+        border-bottom-color: #808080; /* Cambia el color del triángulo en hover */
     }
+
 
 /* Lista de comentarios */
 .lista-comentarios {
@@ -169,3 +171,60 @@ img {
     width: 90%;
     text-align: center;
 }
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    transition: transform 0.3s ease; /* Animación de zoom suave */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1001;
+}
+
+.prev {
+    left: 10px; /* Botón de la izquierda */
+}
+
+.next {
+    right: 10px; /* Botón de la derecha */
+}
+
+    .prev:hover, .next:hover {
+        color: #f1f1f1;
+    }

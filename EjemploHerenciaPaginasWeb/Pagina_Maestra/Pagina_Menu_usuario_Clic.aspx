@@ -15,9 +15,10 @@
             <div class="slider">
                 <asp:Repeater ID="RepeaterImagenes" runat="server">
                     <ItemTemplate>
-                        <img src='<%# Eval("ImagenBase64") %>' alt="Imagen del Departamento" class="slider-imagen" />
+                        <img src='<%# Eval("ImagenBase64") %>' alt="Imagen del Departamento" class="slider-imagen" onclick="openModal(this)" />
                     </ItemTemplate>
                 </asp:Repeater>
+
                 <div class="botones-navegacion">
                     <button type="button" class="btn-navegacion" onclick="moverAnterior()">←</button>
                     <button type="button" class="btn-navegacion" onclick="moverSiguiente()">→</button>
@@ -101,6 +102,17 @@
         </div>
     </div>
 
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content" />
+        <span class="prev" onclick="showPrevImage()">&#10094;</span>
+        <!-- Flecha izquierda -->
+        <span class="next" onclick="showNextImage()">&#10095;</span>
+        <!-- Flecha derecha -->
+    </div>
+
+
+
     <script>
         let currentIndex = 0;
 
@@ -124,5 +136,70 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => mostrarImagen(currentIndex));
+
+        let currentImageIndex = 0; // Índice de la imagen actual
+        let images = []; // Array de imágenes
+
+        // Función para inicializar el array de imágenes al cargar la página
+        function initializeImages() {
+            const imageElements = document.querySelectorAll('.slider-imagen'); // Todas las imágenes del Repeater
+            images = Array.from(imageElements); // Convertimos NodeList a Array
+        }
+
+        // Función para abrir el modal
+        function openModal(img) {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "block"; // Mostrar el modal
+            modalImg.src = img.src; // Mostrar la imagen seleccionada
+            currentImageIndex = images.findIndex(image => image.src === img.src); // Establecer índice actual
+            // Agregar el evento de teclado solo cuando el modal esté abierto
+            document.addEventListener("keydown", handleKeyboardNavigation);
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none"; // Ocultar el modal
+            // Eliminar el evento de teclado al cerrar el modal
+            document.removeEventListener("keydown", handleKeyboardNavigation);
+        }
+
+        // Función para mostrar la imagen anterior
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length; // Navegar al índice anterior
+            const modalImg = document.getElementById("modalImage");
+            modalImg.src = images[currentImageIndex].src; // Mostrar la imagen anterior
+            updateCounter(); // (Si tienes un contador, lo actualiza)
+        }
+
+        // Función para mostrar la imagen siguiente
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length; // Navegar al índice siguiente
+            const modalImg = document.getElementById("modalImage");
+            modalImg.src = images[currentImageIndex].src; // Mostrar la imagen siguiente
+            updateCounter(); // (Si tienes un contador, lo actualiza)
+        }
+
+        // Llama a esta función al cargar la página
+        initializeImages();
+
+        //document.addEventListener("keydown", function (event) {
+        //    if (event.key === "Escape") {
+        //        closeModal(); // Cierra el modal si se presiona ESC
+        //    }
+        //});
+
+        function handleKeyboardNavigation(event) {
+            if (event.key === "ArrowLeft") {
+                showPrevImage(); // Muestra la imagen anterior con la flecha izquierda
+            } else if (event.key === "ArrowRight") {
+                showNextImage(); // Muestra la imagen siguiente con la flecha derecha
+            } else if (event.key === "Escape") {
+                closeModal(); // Cierra el modal con la tecla Escape
+            }
+        }
+
+
     </script>
 </asp:Content>
